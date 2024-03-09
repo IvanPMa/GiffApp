@@ -9,7 +9,6 @@ export const GifExpertApp = () => {
         setCategories([...categories, 'Valorant']);
     }
 
-    console.log(categories  )
 
     return (
         <>
@@ -17,14 +16,13 @@ export const GifExpertApp = () => {
             <h1>GifExpertApp</h1>
 
             {/* Input */}
-            <AddCategory />
+            <AddCategory setCategories={ setCategories } />
 
             {/* List of Gif */}
-            <button onClick={onAddCategory}>Agregar</button>
             <ol>
                 { 
                     categories.map( category => {
-                        return <li key= { category }>Hola</li>
+                        return <li key= { category }>{ category }</li>
                     }) 
                 }
             </ol>
